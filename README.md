@@ -33,9 +33,8 @@
 
 ### 利用Cloudflare pages部署
 
-> [开启图片管理功能教程](./docs/manage.md)
 
-1. 点击[Use this template](https://github.com/x-dr/telegraph-Image/generate)按钮创建一个新的代码库。
+1. 在你的Github中[Fork this project](https://github.com/igengdu/telegraph-Image/fork)，并完成仓库的新建。
 
 2. 登录到[Cloudflare](https://dash.cloudflare.com/)控制台.
 3. 在帐户主页中，选择`pages`> ` Create a project` > `Connect to Git`
@@ -45,13 +44,15 @@
 
 5. 点击`Save and Deploy`部署，然后点`Continue to project`即可看到访问域名
 
->  访问http(s)://你的域名/admin 即可打开后台管理页面
+>  访问http(s)://你的pages.dev域名/admin 即可打开后台管理页面
 
->  访问http(s)://你的域名/list 即可打开log管理页面
+>  访问http(s)://你的pages.dev域名/list 即可打开log管理页面
+
+如果想通过自定义域名访问图床，在Cloudflare pages项目选择自定义域名进行设置即可。
 
 
-#### 后台管理不是很完善 但基本的应该都有了 
-
+#### 后台管理只有基本功能，够用；默认关闭后台管理加密，你也可以开启后台管理加密 
+教程参考：
 **[开启图片管理功能教程](./docs/manage.md)**
 
 
@@ -59,7 +60,7 @@
 ---
 ### 利用vercel部署(vercel分支)
 
-[![Deploy with Vercel](https://vercel.com/button?utm_source=busiyi&utm_campaign=oss)](https://vercel.com/new/clone?utm_source=busiyi&utm_campaign=oss&repository-url=https://github.com/x-dr/telegraph-Image/tree/vercel)
+[![Deploy with Vercel](https://vercel.com/button?utm_source=busiyi&utm_campaign=oss)](https://vercel.com/new/clone?utm_source=busiyi&utm_campaign=oss&repository-url=https://github.com/igengdu/telegraph-Image/tree/vercel)
 
 ---
 
