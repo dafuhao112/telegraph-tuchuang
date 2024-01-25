@@ -1,8 +1,9 @@
 # telegraph-Image
 
 
-### [Demo](https://img.231516.xyz/)
-
+### My Demo[https://img.231516.xyz/](https://img.231516.xyz/)
+   提醒：同一张照片或视频，会生成两个连接，分别是`https://yourdomain.com/file/yourfilename.png`和`https://telegr.ph/file/yourfilename.png`。两个连接的文件名是相同的。后台管理中的图片，只显示自己图床域名的连接地址，此时可以将`https://yourdomain.com/file/`替换为https://telegr.ph/file/，即可获得另一个地址。
+    
 ### 开发计划
 - [x] 后台管理
 - [x] 鉴黄
