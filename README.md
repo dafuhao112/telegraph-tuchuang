@@ -1,7 +1,7 @@
 # telegraph-Image
 
 
-### [Demo](https://img.131213.xyz/)
+### [Demo](https://img.231516.xyz/)
 
 ### 开发计划
 - [x] 后台管理
@@ -34,7 +34,7 @@
 ### 利用Cloudflare pages部署
 
 
-1. 在你的Github中[Fork this project](https://github.com/igengdu/telegraph-Image/fork)，并完成仓库的新建。
+1. 在你的Github中[Fork this project](https://github.com/igengdu/telegraph-Image/fork)，并完成仓库的新建。(在原作基础上作了部分修改：注释掉telegraph-Image/cf_58duihuan.js中https://api.weixinyanxuan.com/mall/api/img/upload相关代码，即注释掉第109-127行)。
 
 2. 登录到[Cloudflare](https://dash.cloudflare.com/)控制台.
 3. 在帐户主页中，选择`pages`> ` Create a project` > `Connect to Git`
