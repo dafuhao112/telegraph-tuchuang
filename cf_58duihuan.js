@@ -10,7 +10,7 @@ const handleRequest = async (request) => {
     const asOrganization = request.cf.asOrganization || ""
 
     if (url.pathname == "/") {
-        const html = await fetch("https://raw.githubusercontent.com/x-dr/telegraph-Image/main/img.html")
+        const html = await fetch("https://raw.githubusercontent.com/igengdu/telegraph-Image/main/img.html")
 
         const page = await html.text()
         return new Response(page, {
