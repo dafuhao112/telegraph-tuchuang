@@ -106,25 +106,25 @@ async function getImgData(request) {
     formData.append('timestamp', timestamp);
     formData.append('file', formData1.get('file'));
 
-    const res_img = await fetch('https://api.weixinyanxuan.com/mall/api/img/upload', {
-        method: request.method,
-        headers: imgheaders,
-        body: formData,
-    });
-    const responseData = await res_img.json();
-    try {
-        if (responseData.code === 200) {
-            const _URL = responseData.data;
-            return _URL
-        } else {
-            return responseData.message
-        }
+  //  const res_img = await fetch('https://api.weixinyanxuan.com/mall/api/img/upload', {
+  //    method: request.method,
+  //     headers: imgheaders,
+  //      body: formData,
+  //   });
+ //   const responseData = await res_img.json();
+ //   try {
+ //      if (responseData.code === 200) {
+ //           const _URL = responseData.data;
+ //          return _URL
+ //       } else {
+ //            return responseData.message
+ //       }
+  
+ //  } catch (e) {
 
-    } catch (e) {
+ //      return "error"
 
-        return "error"
-
-    }
+ //   }
 
 
 }
