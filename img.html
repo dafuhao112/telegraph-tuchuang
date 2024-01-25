@@ -371,31 +371,37 @@
 
         var uploaded_files = [];
 
-        function render_uploaded() {
-            $('#imagedetail').html("");
-            $('#htmlcode').html("");
-            $('#bbcode').html("");
-            $('#markdown').html("");
-            $("#showurl").hide();
-            if (uploaded_files.length == 0)
-                return;
-            uploaded_files.sort(function (a, b) { return a.index - b.index; });
-            if ($('#showurl').html()) {
-                $("#showurl").show();
-            }
-            uploaded_files.forEach(function (x) {
-                var resp = x.resp;
-                var name = resp.data.url.split('/').pop();
-                var url = resp.data.url
-                var url1 = resp.data.url1
-                var wsrvUrl = generateWsrvUrl(url, 300, 300);
-                $('#imagedetail').append(formatHtml({ url: url, code: url, codewave: url1,  wsrv: wsrvUrl }));
-                $('#htmlcode').append(formatHtml({ url: url, code: '<img src="' + url + '" />', codewave: '<img src="' + url1 + '" />', wsrv: '<img src="' + wsrvUrl + '" />' }));
-                $('#bbcode').append(formatHtml({ url: url, code: '[img]' + url + '[/img]', codewave: '[img]' + url1 + '[/img]', wsrv: '[img]' + wsrvUrl + '[/img]' }));
-                $('#markdown').append(formatHtml({ url: url, code: '![' + name + '](' + url + ')', codewave: '![' + name + '](' + url1 + ')', wsrv: '![' + name + '](' + wsrvUrl + ')'  }));
-            });
-        }
-        function generateWsrvUrl(imageUrl, width, height) { return `//wsrv.nl/?url=${encodeURIComponent(imageUrl)}&w=${width}&h=${height}`; }
+var uploaded_files = [];
+
+function render_uploaded() {
+    $('#imagedetail').html("");
+    $('#htmlcode').html("");
+    $('#bbcode').html("");
+    $('#markdown').html("");
+    $("#showurl").hide();
+    if (uploaded_files.length == 0)
+        return;
+    uploaded_files.sort(function (a, b) { return a.index - b.index; });
+    if ($('#showurl').html()) {
+        $("#showurl").show();
+    }
+    uploaded_files.forEach(function (x) {
+        var resp = x.resp;
+        var name = resp.data.url.split('/').pop();
+        var url = resp.data.url;
+        var url1 = resp.data.url1;
+        var wsrvUrl = generateWsrvUrl(url, 300, 300);
+
+        $('#imagedetail').append(formatHtml({ url: url, code: url, codewave: url1, wsrv: wsrvUrl }));
+        $('#htmlcode').append(formatHtml({ url: url, code: '<img src="' + url + '" />', codewave: '<img src="' + url1 + '" />', wsrv: '<img src="' + wsrvUrl + '" />' }));
+        $('#bbcode').append(formatHtml({ url: url, code: '[img]' + url + '[/img]', codewave: '[img]' + url1 + '[/img]', wsrv: '[img]' + wsrvUrl + '[/img]' }));
+        $('#markdown').append(formatHtml({ url: url, code: '![' + name + '](' + url + ')', codewave: '![' + name + '](' + url1 + ')', wsrv: '![' + name + '](' + wsrvUrl + ')' }));
+    });
+}
+
+function generateWsrvUrl(imageUrl, width, height) {
+    return `//wsrv.nl/?url=${encodeURIComponent(imageUrl)}&w=${width}&h=${height}`;
+}
 
         $smfile.on('fileuploaded', async function (event, data, previewId, index) {
             var form = data.form, files = data.files, extra = data.extra, response = data.response, reader = data.reader;
