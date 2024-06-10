@@ -18,7 +18,7 @@ $smfile.fileinput({
     allowedFileExtensions: ['jpeg', 'jpg', 'png', 'gif', 'bmp', 'mp4', 'mov', 'avi'],
     overwriteInitial: false,
     previewFileType: "image",
-    maxFileSize: '5120',
+    maxFileSize: '102400',
     maxFileCount: '100',
     maxAjaxThreads: 2,
     showClose: false,
