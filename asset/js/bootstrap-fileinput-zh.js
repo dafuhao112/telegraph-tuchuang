@@ -43,7 +43,7 @@
         msgZoomModalHeading: '详细预览',
         msgFileRequired: '必须选择一个文件上传.',
         msgSizeTooSmall: '文件 "{name}" (<b>{size}</b>) 必须大于限定大小 <b>{minSize}</b>.',
-        msgSizeTooLarge: '文件 "{name}" (<b>{size}</b>) 超过了允许大小 <b>100MB</b>.',  // 这里修改为100MB
+        msgSizeTooLarge: '文件 "{name}" (<b>{size}</b>) 超过了允许大小 <b>{maxSize}</b>.',
         msgFilesTooLess: '你必须选择最少 <b>{n}</b> {files} 来上传. ',
         msgFilesTooMany: '选择的上传文件个数 <b>({n})</b> 超出最大文件的限制个数 <b>{m}</b>.',
         msgTotalFilesTooMany: '你最多可以上传 <b>{m}</b> 个文件 (当前有<b>{n}</b> 个文件).',
